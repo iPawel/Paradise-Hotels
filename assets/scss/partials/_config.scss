@@ -1,0 +1,11 @@
+$purple-color: rgba(124, 40, 171, 1);
+
+
+//    Mixins -----------
+
+@mixin pseudo ($position: absolute, $content: "", $display: block) {
+    position: $position;
+    content: $content;
+    display: $display;
+
+}

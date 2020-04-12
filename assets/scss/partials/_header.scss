@@ -2,7 +2,33 @@
 width: 100%;
 height: 100vh;
 position: relative;
-padding-top: 1rem;
+padding: 1rem 1rem 0;
+overflow: hidden;
+background-color: lighten($purple-color, 40);
+
+    &__container {
+        margin: 0;
+    }
+
+    &__content {
+        margin-top: 3rem;
+    }
+
+    &__title {
+        font-family: $headline-font;
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        color: white;
+    }
+
+    &__subtitle {
+        font-size: 1.2rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+        color: white;
+    }
 
 
 }
@@ -11,6 +37,8 @@ padding-top: 1rem;
 //   Logo   ----------------
 
 .logo__img {
+    position: relative;
+    z-index: 999;
     width: 70px;
     display: inline-block;
     margin-top: -.5rem;
@@ -19,18 +47,136 @@ padding-top: 1rem;
 
 //  Navigation -------------
 
+.nav {
 
 
-//   Mobile-Menu  .Burger     ----------------
+    &__container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        transform: translateX(100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(45deg, $purple-color, rgb(208, 160, 247));
+        background: url('../../../assets/images/mobile-menu-420.jpg') no-repeat center center/cover;
+        transition: .4s ease-in-out;
+
+        &::before {
+            @include pseudo;
+
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba($purple-color, .6);
+        }
+
+        &--active {
+            transform: translateX(0);
+        }
+    }
+
+    &__item {
+        margin-top: 1.5rem;
+        border-bottom: 1px solid white;
+        text-align: center;
+        transform: scale(0);
+    }
+
+
+
+    &__link {
+        display: inline-block;
+        padding: .2rem;
+        font-size: 1.6rem;
+        font-family: $headline-font;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        margin-right: -2px;
+        text-decoration: none;
+        color: white;
+
+        &::first-letter {
+            font-size: 2rem;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+
+}
+
+.nav__container--active .nav__item {
+    animation: fadeIn .7s .5s forwards;
+}
+
+.nav__container--active .nav__item:nth-child(1) {
+    animation-delay: .4s;
+}
+
+.nav__container--active .nav__item:nth-child(2) {
+    animation-delay: .6s;
+}
+
+.nav__container--active .nav__item:nth-child(3) {
+    animation-delay: .8s;
+}
+
+.nav__container--active .nav__item:nth-child(4) {
+    animation-delay: 1s;
+}
+
+.nav__container--active .nav__item:nth-child(5) {
+    animation-delay: 1.2s;
+}
+
+
+
+.nav__container--active .btn {
+    transform: scale(0);
+    animation: fadeIn .7s .5s forwards;
+}
+
+.nav__container--active .btn:nth-child(1) {
+    animation-delay: 1.5s;
+}
+
+.nav__container--active .btn:nth-child(2) {
+    animation-delay: 1.7s;
+}
+
+@keyframes fadeIn {
+    0% {
+    transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+//   Mobile-Menu-icon .Burger     ----------------
 
 .burger  {
     display: inline-block;
     position: absolute;
     width: 36px;
     height: 26px;
-    top: 1.5rem;
+    top: 2rem;
     right: 1rem;
     cursor: pointer;
+    z-index: 999;
 
     &__icon {
         display: inline-block;
@@ -38,7 +184,7 @@ padding-top: 1rem;
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        width: 100%;
+        width: 36px;
         height: 4px;
         border-radius: 3px;
         background-color: black;
@@ -67,15 +213,15 @@ padding-top: 1rem;
     }
 }
 
-    &__icon--active {
+    &--active .burger__icon {
         background-color: transparent;
     }
 
-    &__icon--active.burger__icon::before {
+    &--active .burger__icon::before {
         transform: rotate(45deg) translate(0, 14px);
     }
 
-    &__icon--active.burger__icon::after {
+    &--active .burger__icon::after {
         transform: rotate(-45deg) translate(0, -14px);
     }
 }

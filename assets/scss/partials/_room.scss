@@ -1,0 +1,68 @@
+.room {
+
+
+
+    &__image-container {
+        position: relative;
+    }
+
+    &__image-title {
+        position: absolute;
+        top: -1rem;
+        left: 1rem;
+        padding-bottom: .5rem;
+        background-color: rgba(white, .15);
+        border-bottom: 2px solid $purple-color;
+    }
+
+    &__price {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: rgba($purple-color, .4);
+        box-shadow: 2px 2px 5px rgba(black, .7);
+
+    }
+
+    &__span {
+        color: white;
+        letter-spacing: 4px;
+        font-weight: 400;
+        margin-left: .3rem;
+    }
+
+    &__text {
+        margin: 1.3rem 0;
+        line-height: 1.6;
+        font-size: 1.125rem;
+        letter-spacing: 2px;
+        font-weight: 500;
+        color: yellow;
+        
+    }
+
+    &__info {
+        padding: 1rem;
+
+
+        & .fas {
+            font-size: 2rem;
+            margin: 1rem 1rem 1rem 0;
+        }
+    }
+
+    &__description {
+        padding: 2rem 1rem;
+        color: black;
+        background-color: rgba($purple-color, .55);
+        box-shadow: 2px 2px 5px rgba(black, .7);
+
+        & .fas {
+            margin-right: .5rem;
+            color: yellow;
+        }
+    }
+
+}

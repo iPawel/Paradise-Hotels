@@ -1,0 +1,26 @@
+.hotels {
+
+
+    &__card {
+        position: relative;
+        width: 100%;
+        margin: 2rem 0;
+
+    }
+
+    &__hover {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+
+        & .fas {
+            font-size: 1.4rem;
+            padding: .7rem;
+            border-radius: 50%;
+            color: $purple-color;
+            background-color: #fff;
+            transform: translateY(7rem);
+            opacity: .8;
+        }
+    }
+}

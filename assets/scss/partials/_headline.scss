@@ -1,0 +1,26 @@
+.headline {
+    font-size: 1.6rem;
+    font-family: $headline-font;
+    letter-spacing: 2px;
+    margin: 1rem 0;
+
+    &--small {
+        font-size: 1.4rem;
+    }
+
+    &--centered {
+        text-align: center;
+    }
+
+    &--purple {
+        color: rgba($purple-color, 1);
+    }
+
+    &--white {
+        color: white;
+    }
+
+    &--no-top-margin {
+        margin-top: 0;
+    }
+}

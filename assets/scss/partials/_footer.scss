@@ -1,0 +1,35 @@
+.footer {
+
+
+
+    &__list {
+        margin: 2rem 0;
+        padding: 1rem 0;
+        border-bottom: 1px solid $purple-color;
+    }
+
+    &__item {
+        margin: 1rem 0;
+    }
+
+    &__link {
+        font-size: 1.1rem;
+        color: darkgray;
+    }
+
+    &__text {
+        font-size: 1.1rem;
+        color: darkgray;
+    }
+
+    & .fas {
+        color: red;
+        margin: 0 .2rem;
+    }
+
+    & .fab {
+        font-size: 1.5rem;
+        margin: .5rem .8rem .5rem 0;
+        color: orange;
+    }
+}

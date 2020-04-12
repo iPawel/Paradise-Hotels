@@ -1,0 +1,20 @@
+.generic-content-container {
+
+    &--white {
+        color: white;
+
+        p {
+            color: white;
+        }
+    }
+
+
+
+    p {
+        line-height: 1.6;
+        font-size: 1.125rem;
+        letter-spacing: 1px;
+        margin: 1.5rem 0;
+        font-weight: 500;
+    }
+}

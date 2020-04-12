@@ -1,0 +1,13 @@
+.staff {
+
+
+    &__card {
+        position: relative;
+        padding: 1rem 0;
+        border-bottom: 2px solid $purple-color;
+
+        &:nth-child(2) {
+            border-bottom: none;
+        }
+    }
+}

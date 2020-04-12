@@ -6,28 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font-awesome ------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <!-- Google Fonts  ------------>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Oswald:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <!-- CSS ------------------->
     <link rel="stylesheet" href="./css/style.css">
     <title>Paradise Hotels</title>
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header">
-        <div class="burger">
+        <div tabindex="1" class="burger">
             <span class="burger__icon"></span>
         </div>
         <nav class="nav">
             <a href="index.html" class="logo"><img class="logo__img" src="./images/logo.png" alt="Company logo"></a>
-            <ul class="nav__list">
-                <li class="nav__item"><a href="" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="" class="nav__link">Gallery</a></li>
-                <li class="nav__item"><a href="" class="nav__link">Find Hotel</a></li>
-                <li class="nav__item"><a href="" class="nav__link">About</a></li>
-                <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
-            </ul>
-            <div class="nav__right">
-                <button class="btn btn--no-bgc">Sign In</button>
-                <button class="btn">Sign Up</button>
+            <div class="nav__container">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Gallery</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Find Hotel</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="nav__right">
+                    <button class="btn btn--clear btn--margin-t">Sign In</button>
+                    <button class="btn">Sign Up</button>
+                </div>
             </div>
         </nav>
         <div class="header__container">
@@ -35,30 +42,243 @@
                 <h1 class="header__title">Make Your Comfort is Our Happines</h1>
                 <h2 class="header__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, atque!
                 </h2>
-                <button class="btn">Find a Hotels <i class="fas fa-search"></i></button>
+                <button class="btn btn--margin-b">Find a Hotels <i class="fas fa-search"></i></button>
             </div>
-            <img src="./images/large-hero-800.jpg" alt="" class="header__img">
+            <img src="./images/large-hero-800.png" alt="" class="header__img">
         </div>
     </header>
-
-
-
-
-
-
-
-
-
-
-    <i class="fas fa-bed"></i>
-    <i class="fas fa-bath"></i>
-    <i class="fas fa-concierge-bell"></i>
-    <i class="fas fa-phone"></i>
-    <i class="fas fa-medal"></i>
-    <i class="fas fa-couch"></i>
-    <i class="fas fa-search"></i>
-    <i class="fas fa-arrow-right"></i>
-
+    <!-- Showcase -->
+    <section class="showcase">
+        <div class="showcase__content">
+            <div class="generic-content-container generic-content-container--white">
+                <h2 class="headline">Paradise Hotels Lounges</h2>
+                <p>An amezing place for a coffiee</p>
+            </div>
+        </div>
+    </section>
+    <!-- Instruction -->
+    <div class="page-section">
+        <div class="wrapper">
+            <section class="instruction">
+                <div class="instruction__top">
+                    <div class="instruction__content">
+                        <div class="generic-content-container">
+                            <h2 class="headline headline--purple">Just Follow Our Steps and Get Everything</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus tempore aperiam
+                                odit!
+                            </p>
+                        </div>
+                        <div class="instruction__card">
+                            <span class="instruction__span">01</span>
+                            <div class="generic-content-container">
+                                <h3 class="headline headline--purple headline--small headline--no-top-margin">Find a
+                                    Hotel You Want to Visit
+                                </h3>
+                                <p>Visit our website and Browse your hotel, you can saved and ready to book.</p>
+                            </div>
+                        </div>
+                        <div class="instruction__card">
+                            <span class="instruction__span">02</span>
+                            <div class="generic-content-container">
+                                <h3 class="headline headline--purple headline--no-top-margin">Book Your Choice</h3>
+                                <p>Only by making a transaction you have managed to get all the facilities</p>
+                            </div>
+                        </div>
+                        <div class="instruction__card">
+                            <span class="instruction__span">03</span>
+                            <div class="generic-content-container">
+                                <h3 class="headline headline--purple headline--no-top-margin">Check-in</h3>
+                                <p>Come to the hotel with proof of payment and get the service</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="../assets/images/booking-400.jpg" alt="">
+                </div>
+                <div class="instruction__bottom">
+                    <div class="instruction__values">
+                        <i class="fas fa-bed"></i>
+                        <div class="generic-content-container">
+                            <h3 class="headline headline--small headline--purple">Comfort Place</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="instruction__values">
+                        <i class="fas fa-medal"></i>
+                        <div class="generic-content-container">
+                            <h3 class="headline headline--small headline--purple">Best Facilities</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="instruction__values">
+                        <i class="fas fa-phone"></i>
+                        <div class="generic-content-container">
+                            <h3 class="headline headline--small headline--purple">24 /7 Service</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- room section -->
+    <div class="page-section page-section--purple">
+        <div class="wrapper">
+            <section class="room">
+                <div class="room__container">
+                    <div class="generic-content-container">
+                        <h2 class="headline headline--white">Get a Comfortable Room and Feel the Comfort</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, fugit qui minus sed iusto
+                            alias repellendus!</p>
+                    </div>
+                    <div class="room__image-container">
+                        <img src="../assets/images/bedroom-360.jpg" class="room__img" alt="double bed in a hotel room">
+                        <h3 class="headline room__image-title">Paradise Hotel Las Vegas</h3>
+                    </div>
+                </div>
+                <div class="room__details">
+                    <div class="room__price">
+                        <h3 class="headline">$500.00<span class="room__span">/day</span></h3>
+                        <p class="room__text">Exclusive</p>
+                    </div>
+                    <div class="room__info">
+                        <div class="generic-content-container">
+                            <p><i class="fas fa-bed"></i>Double Bed</p>
+                            <p><i class="fas fa-bath"></i>Elite Bathroom</p>
+                            <p><i class="fas fa-concierge-bell"></i>Dining Room</p>
+                        </div>
+                    </div>
+                    <div class="room__description">
+                        <div class="generic-content-container generic-content-container">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium veritatis illum,
+                                error perferendis quasi mollitia cupiditate omnis eligendi libero in adipisci. Enim
+                                debitis officiis esse fuga ratione in vitae consequuntur.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- hotels section -->
+    <div class="page-section">
+        <div class="wrapper">
+            <section class="hotels">
+                <div class="hotels__content">
+                    <div class="generic-content-container">
+                        <h2 class="headline headline--purple">Come See Some of Our Popular Hotels</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit error est animi nisi
+                            excepturi?</p>
+                        <button class="btn">Find a hotels <i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="hotels__card">
+                    <img src="../assets/images/hotels-3-360.jpg" alt="Three buildings hotel at night">
+                    <div class="hotels__hover">
+                        <h3 class="headline headline--small headline--white">Paradise Hotel, Singapore</h3>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="hotels__card">
+                    <img src="../assets/images/hotels-2-360.jpg" alt="Three buildings hotel at night">
+                    <div class="hotels__hover">
+                        <h3 class="headline headline--small headline--white">Paradise Hotel, Bangkok</h3>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="hotels__card">
+                    <img src="../assets/images/hotels-1-360.jpg" alt="Three buildings hotel at night">
+                    <div class="hotels__hover">
+                        <h3 class="headline headline--small headline--white">Paradise Hotel, Maldives</h3>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- Staff section---------------------------->
+    <div class="page-section page-section--purple">
+        <div class="wrapper">
+            <section class="staff">
+                <div class="staff__card">
+                    <h2 class="headline headline--centered">We Are Very Proud of Ours Hotels and a Staff Who Work Here
+                    </h2>
+                    <img class="staff__img" src="./images/hotel-ilustration-mobile.png" alt="">
+                </div>
+                <div class="staff__card">
+                    <img src="./images/staff-360-light.jpg" alt="">
+                    <h2 class="headline headline--centered">We Are Amazing. Come on and Check it Out.</h2>
+                    <button class="btn btn--centered">Book it now!!</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="page-section">
+        <div class="wrapper">
+            <footer class="footer">
+                <div class="generic-content-container">
+                    <a href="index.html" class="logo"><img class="logo__img" src="./images/logo.png"
+                            alt="Company logo"></a>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur unde in facilis amet
+                        exercitationem, esse cum?</p>
+                </div>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <h3 class="headline headline--small">Product</h3>
+                    </li>
+                    <li class="footer__item">
+                        <a href="index.html" class="footer__link">Home</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Gallery</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Find Hotel</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">About</a>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <h3 class="headline headline--small">Company</h3>
+                    </li>
+                    <li class="footer__item">
+                        <a href="index.html" class="footer__link">Term of Use</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Privacy Policy</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Careers</a>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <h3 class="headline headline--small">Contact</h3>
+                    </li>
+                    <li class="footer__item">
+                        <a href="mailto:info@paradise-hotels.com" class="footer__link">info@paradise-hotels.com</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="tel:+44207333111" class="footer__link">+44 207 333 111</a>
+                    </li>
+                    <li class="footer__item">
+                        <p class="footer__text"> 28 Royal Road, EC1 1LI, London, UK</p>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link"><i class="fab fa-facebook"></i></a>
+                        <a href="" class="footer__link"><i class="fab fa-instagram"></i></a>
+                        <a href="" class="footer__link"><i class="fab fa-twitter"></i></a>
+                    </li>
+                </ul>
+                <small class="footer__copyright">Copyright &copy; 2020, Paradise Hotels. All Rights Reserved. Website
+                    developed with <i class="fas fa-heart"></i> by
+                    iPawel</small>
+            </footer>
+        </div>
+    </div>
 
     <script src="./scripts/mobile-menu.js"></script>
 

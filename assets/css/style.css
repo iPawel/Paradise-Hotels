@@ -7,12 +7,18 @@
           box-sizing: border-box;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 ul {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
+img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .wrapper {
@@ -21,21 +27,242 @@ a {
   margin: 0 auto;
 }
 
-img {
-  width: 100%;
+.btn {
+  display: block;
+  padding: .9rem 1.8rem;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-image: linear-gradient(135deg, #7c28ab, #f8072f);
+  border: 2px solid #f8072f;
+  border-radius: 25px;
+  color: white;
+  border: 2px solid black;
+  text-transform: uppercase;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  -webkit-transform: scaleX(0.98);
+          transform: scaleX(0.98);
+  color: yellow;
+  -webkit-box-shadow: inset 4px 4px 6px black;
+          box-shadow: inset 4px 4px 6px black;
+}
+
+.btn--clear {
+  background-image: none;
+  background-color: transparent;
+  color: white;
+  border: 2px solid #f8072f;
+}
+
+.btn--margin-t {
+  margin-bottom: 1rem;
+}
+
+.btn--margin-b {
+  margin-bottom: 2rem;
+}
+
+.btn .fas {
+  margin-left: .5rem;
+}
+
+.btn--centered {
+  margin: 0 auto;
 }
 
 .header {
   width: 100%;
   height: 100vh;
   position: relative;
-  padding-top: 1rem;
+  padding: 1rem 1rem 0;
+  overflow: hidden;
+  background-color: #d8b2ed;
+}
+
+.header__container {
+  margin: 0;
+}
+
+.header__content {
+  margin-top: 3rem;
+}
+
+.header__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.header__subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  color: white;
 }
 
 .logo__img {
+  position: relative;
+  z-index: 999;
   width: 70px;
   display: inline-block;
   margin-top: -.5rem;
+}
+
+.nav__container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: linear-gradient(45deg, #7c28ab, #d0a0f7);
+  background: url("../../../assets/images/mobile-menu-420.jpg") no-repeat center center/cover;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.nav__container::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(124, 40, 171, 0.6);
+}
+
+.nav__container--active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav__item {
+  margin-top: 1.5rem;
+  border-bottom: 1px solid white;
+  text-align: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.nav__link {
+  display: inline-block;
+  padding: .2rem;
+  font-size: 1.6rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  margin-right: -2px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav__link::first-letter {
+  font-size: 2rem;
+}
+
+.nav__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav__container--active .nav__item {
+  -webkit-animation: fadeIn .7s .5s forwards;
+          animation: fadeIn .7s .5s forwards;
+}
+
+.nav__container--active .nav__item:nth-child(1) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.nav__container--active .nav__item:nth-child(2) {
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+.nav__container--active .nav__item:nth-child(3) {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+.nav__container--active .nav__item:nth-child(4) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.nav__container--active .nav__item:nth-child(5) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.nav__container--active .btn {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: fadeIn .7s .5s forwards;
+          animation: fadeIn .7s .5s forwards;
+}
+
+.nav__container--active .btn:nth-child(1) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.nav__container--active .btn:nth-child(2) {
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .burger {
@@ -43,9 +270,10 @@ img {
   position: absolute;
   width: 36px;
   height: 26px;
-  top: 1.5rem;
+  top: 2rem;
   right: 1rem;
   cursor: pointer;
+  z-index: 999;
 }
 
 .burger__icon {
@@ -55,7 +283,7 @@ img {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 100%;
+  width: 36px;
   height: 4px;
   border-radius: 3px;
   background-color: black;
@@ -85,17 +313,261 @@ img {
   top: 10px;
 }
 
-.burger__icon--active {
+.burger--active .burger__icon {
   background-color: transparent;
 }
 
-.burger__icon--active.burger__icon::before {
+.burger--active .burger__icon::before {
   -webkit-transform: rotate(45deg) translate(0, 14px);
           transform: rotate(45deg) translate(0, 14px);
 }
 
-.burger__icon--active.burger__icon::after {
+.burger--active .burger__icon::after {
   -webkit-transform: rotate(-45deg) translate(0, -14px);
           transform: rotate(-45deg) translate(0, -14px);
+}
+
+.showcase {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  background: url(../../../assets/images/lounge-360.jpg) no-repeat center center/cover;
+  background-attachment: fixed;
+  overflow: auto;
+}
+
+.showcase::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(124, 40, 171, 0.2);
+}
+
+.showcase__content {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.generic-content-container--white {
+  color: white;
+}
+
+.generic-content-container--white p {
+  color: white;
+}
+
+.generic-content-container p {
+  line-height: 1.6;
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+  margin: 1.5rem 0;
+  font-weight: 500;
+}
+
+.page-section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.page-section--purple {
+  background-color: rgba(124, 40, 171, 0.25);
+}
+
+.headline {
+  font-size: 1.6rem;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+  margin: 1rem 0;
+}
+
+.headline--small {
+  font-size: 1.4rem;
+}
+
+.headline--centered {
+  text-align: center;
+}
+
+.headline--purple {
+  color: #7c28ab;
+}
+
+.headline--white {
+  color: white;
+}
+
+.headline--no-top-margin {
+  margin-top: 0;
+}
+
+.instruction__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 1.5rem 0;
+}
+
+.instruction__span {
+  display: inline-block;
+  margin-right: 1.5rem;
+  padding: .5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: white;
+  background-color: #7c28ab;
+  border-radius: 50%;
+}
+
+.instruction__values {
+  margin: 1.5rem 0 1.5rem 0rem;
+}
+
+.instruction__values .fas {
+  color: #7c28ab;
+  font-size: 2.6rem;
+  margin: .8rem 0;
+}
+
+.room__image-container {
+  position: relative;
+}
+
+.room__image-title {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+  padding-bottom: .5rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-bottom: 2px solid #7c28ab;
+}
+
+.room__price {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  background-color: rgba(124, 40, 171, 0.4);
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.room__span {
+  color: white;
+  letter-spacing: 4px;
+  font-weight: 400;
+  margin-left: .3rem;
+}
+
+.room__text {
+  margin: 1.3rem 0;
+  line-height: 1.6;
+  font-size: 1.125rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: yellow;
+}
+
+.room__info {
+  padding: 1rem;
+}
+
+.room__info .fas {
+  font-size: 2rem;
+  margin: 1rem 1rem 1rem 0;
+}
+
+.room__description {
+  padding: 2rem 1rem;
+  color: black;
+  background-color: rgba(124, 40, 171, 0.55);
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.room__description .fas {
+  margin-right: .5rem;
+  color: yellow;
+}
+
+.hotels__card {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.hotels__hover {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+}
+
+.hotels__hover .fas {
+  font-size: 1.4rem;
+  padding: .7rem;
+  border-radius: 50%;
+  color: #7c28ab;
+  background-color: #fff;
+  -webkit-transform: translateY(7rem);
+          transform: translateY(7rem);
+  opacity: .8;
+}
+
+.staff__card {
+  position: relative;
+  padding: 1rem 0;
+  border-bottom: 2px solid #7c28ab;
+}
+
+.staff__card:nth-child(2) {
+  border-bottom: none;
+}
+
+.footer__list {
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid #7c28ab;
+}
+
+.footer__item {
+  margin: 1rem 0;
+}
+
+.footer__link {
+  font-size: 1.1rem;
+  color: darkgray;
+}
+
+.footer__text {
+  font-size: 1.1rem;
+  color: darkgray;
+}
+
+.footer .fas {
+  color: red;
+  margin: 0 .2rem;
+}
+
+.footer .fab {
+  font-size: 1.5rem;
+  margin: .5rem .8rem .5rem 0;
+  color: orange;
 }
 /*# sourceMappingURL=style.css.map */

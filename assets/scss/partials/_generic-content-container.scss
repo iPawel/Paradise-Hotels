@@ -8,13 +8,29 @@
         }
     }
 
+    &--centered {
+        text-align: center;
+    }
+
+    &--b-margin {
+        margin-bottom: 3rem;
+
+        @include tablet {
+            margin-bottom: 4rem;
+        }
+    }
+
 
 
     p {
-        line-height: 1.6;
-        font-size: 1.125rem;
+        line-height: 1.4;
+        font-size: 1.15rem;
         letter-spacing: 1px;
-        margin: 1.5rem 0;
+        margin: 1.4rem 0;
         font-weight: 500;
+
+        @include largeTablet {
+            font-size: 1.3rem;
+        }
     }
 }

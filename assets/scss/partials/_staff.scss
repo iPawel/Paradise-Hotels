@@ -3,8 +3,14 @@
 
     &__card {
         position: relative;
-        padding: 1rem 0;
+        padding: 1rem;
         border-bottom: 2px solid $purple-color;
+
+        @include xLargeMobile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
         &:nth-child(2) {
             border-bottom: none;

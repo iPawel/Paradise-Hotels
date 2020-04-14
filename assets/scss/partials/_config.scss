@@ -11,3 +11,37 @@ $headline-font: 'Oswald', sans-serif;
     display: $display;
 
 }
+
+
+
+//  Media Query ------------------------
+
+@mixin largeMobile {
+    @media (min-width: 530px) {
+        @content
+    }
+}
+
+@mixin xLargeMobile {
+    @media (min-width: 650px) {
+        @content
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 760px) {
+        @content
+    }
+}
+
+@mixin largeTablet {
+    @media (min-width: 900px) {
+        @content
+    }
+}
+
+@mixin laptop {
+    @media (min-width: 1100px) {
+        @content
+    }
+}

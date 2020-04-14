@@ -25,11 +25,19 @@ img {
     max-width: 1200px;
     padding: 0 1rem;
     margin: 0 auto;
+
+    @include xLargeMobile {
+        padding: 0 2rem;
+    }
+
+    @include tablet {
+        // padding: 0 1rem;
+    }
 }
 
 .btn {
     display: block;
-    padding: .9rem 1.8rem;
+    padding: .8rem 1.7rem;
     font-size: 1rem;
     font-family: $body-font;
     font-weight: 600;
@@ -45,7 +53,7 @@ img {
 
     &:hover {
         transform: scaleX(.98);
-        color: yellow;
+        color: orange;
         box-shadow: inset 4px 4px 6px black;
     }
 
@@ -54,14 +62,23 @@ img {
         background-color: transparent;
         color: white;
         border: 2px solid rgb(248, 7, 47);
+
+        @include largeTablet {
+            color: rgb(248, 7, 47);
+            border: none;
+        }
     }
 
     &--margin-t {
         margin-bottom: 1rem;
     }
 
-    &--margin-b {
+    &--margin-b-until-largeTablet {
         margin-bottom: 2rem;
+
+        @include largeTablet {
+            margin-bottom: 0;
+        }
     }
 
     & .fas {

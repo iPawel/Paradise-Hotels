@@ -23,7 +23,7 @@
         </div>
         <nav class="nav">
             <a href="index.html" class="logo"><img class="logo__img" src="./images/logo.png" alt="Company logo"></a>
-            <div class="nav__container">
+            <div role="navigation" class="nav__container">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="" class="nav__link">Gallery</a></li>
@@ -32,7 +32,7 @@
                     <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
                 </ul>
                 <div class="nav__right">
-                    <button class="btn btn--clear btn--margin-t">Sign In</button>
+                    <button class="btn btn--clear btn--margin-b-until-largeTablet">Sign In</button>
                     <button class="btn">Sign Up</button>
                 </div>
             </div>
@@ -44,11 +44,14 @@
                 </h2>
                 <button class="btn btn--margin-b">Find a Hotels <i class="fas fa-search"></i></button>
             </div>
-            <img src="./images/large-hero-800.png" alt="" class="header__img">
+            <img class="header__img" src="./images/large-hero-800.png" alt="" class="header__img">
         </div>
     </header>
     <!-- Showcase -->
     <section class="showcase">
+        <div class="showcase__v-wrap">
+            <video class="showcase__video" src="../assets/images/Video Of Hotel Lounge.mp4" autoplay loop></video>
+        </div>
         <div class="showcase__content">
             <div class="generic-content-container generic-content-container--white">
                 <h2 class="headline">Paradise Hotels Lounges</h2>
@@ -60,14 +63,15 @@
     <div class="page-section">
         <div class="wrapper">
             <section class="instruction">
+                <div
+                    class="generic-content-container generic-content-container--centered generic-content-container--b-margin">
+                    <h2 class="headline headline--purple">Just Follow Our Steps and Get Everything</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus tempore aperiam
+                        odit!
+                    </p>
+                </div>
                 <div class="instruction__top">
                     <div class="instruction__content">
-                        <div class="generic-content-container">
-                            <h2 class="headline headline--purple">Just Follow Our Steps and Get Everything</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus tempore aperiam
-                                odit!
-                            </p>
-                        </div>
                         <div class="instruction__card">
                             <span class="instruction__span">01</span>
                             <div class="generic-content-container">
@@ -80,19 +84,28 @@
                         <div class="instruction__card">
                             <span class="instruction__span">02</span>
                             <div class="generic-content-container">
-                                <h3 class="headline headline--purple headline--no-top-margin">Book Your Choice</h3>
+                                <h3 class="headline headline--purple headline--small headline--no-top-margin">Book
+                                    Your
+                                    Choice</h3>
                                 <p>Only by making a transaction you have managed to get all the facilities</p>
                             </div>
                         </div>
                         <div class="instruction__card">
                             <span class="instruction__span">03</span>
                             <div class="generic-content-container">
-                                <h3 class="headline headline--purple headline--no-top-margin">Check-in</h3>
+                                <h3 class="headline headline--purple headline--small headline--no-top-margin">
+                                    Check-in
+                                </h3>
                                 <p>Come to the hotel with proof of payment and get the service</p>
                             </div>
                         </div>
                     </div>
-                    <img src="../assets/images/booking-400.jpg" alt="">
+                    <picture>
+                        <source srcset="../assets/images/booking-530-portrait.jpg" media="(min-width: 1050px)">
+                        <source srcset="../assets/images/booking-500-portrait.jpg" media="(min-width: 760px)">
+                        <source srcset="../assets/images/booking-500.jpg" media="(min-width: 530px)">
+                        <img src="../assets/images/booking-400.jpg" alt="Three skyscrapers at night">
+                    </picture>
                 </div>
                 <div class="instruction__bottom">
                     <div class="instruction__values">
@@ -131,14 +144,19 @@
                             alias repellendus!</p>
                     </div>
                     <div class="room__image-container">
-                        <img src="../assets/images/bedroom-360.jpg" class="room__img" alt="double bed in a hotel room">
+                        <picture>
+                            <source srcset="../assets/images/bedroom-740.jpg" media="(min-width:740px)">
+                            <source srcset="../assets/images/bedroom-560.jpg" media="(min-width:560px)">
+                            <img src="../assets/images/bedroom-360.jpg" class="room__img"
+                                alt="double bed in a hotel room">
+                        </picture>
                         <h3 class="headline room__image-title">Paradise Hotel Las Vegas</h3>
                     </div>
                 </div>
                 <div class="room__details">
                     <div class="room__price">
-                        <h3 class="headline">$500.00<span class="room__span">/day</span></h3>
-                        <p class="room__text">Exclusive</p>
+                        <h3 class="headline headline--small">$500.00<span class="room__span">/day</span></h3>
+                        <p class="room__text">DeLuxe</p>
                     </div>
                     <div class="room__info">
                         <div class="generic-content-container">
@@ -152,8 +170,7 @@
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                 class="fas fa-star"></i><i class="fas fa-star"></i>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium veritatis illum,
-                                error perferendis quasi mollitia cupiditate omnis eligendi libero in adipisci. Enim
-                                debitis officiis esse fuga ratione in vitae consequuntur.</p>
+                                error perferendis quasi mollitia cupiditate.</p>
                         </div>
                     </div>
                 </div>
@@ -173,21 +190,30 @@
                     </div>
                 </div>
                 <div class="hotels__card">
-                    <img src="../assets/images/hotels-3-360.jpg" alt="Three buildings hotel at night">
+                    <picture>
+                        <source srcset="../assets/images/hotels-3-540.jpg" media="(min-width: 900px)">
+                        <img src="../assets/images/hotels-3-360.jpg" alt="Three buildings hotel at night">
+                    </picture>
                     <div class="hotels__hover">
                         <h3 class="headline headline--small headline--white">Paradise Hotel, Singapore</h3>
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </div>
                 <div class="hotels__card">
-                    <img src="../assets/images/hotels-2-360.jpg" alt="Three buildings hotel at night">
+                    <picture>
+                        <source srcset="../assets/images/hotels-2-540.jpg" media="(min-width: 900px)">
+                        <img src="../assets/images/hotels-2-360.jpg" alt="Three buildings hotel at night">
+                    </picture>
                     <div class="hotels__hover">
                         <h3 class="headline headline--small headline--white">Paradise Hotel, Bangkok</h3>
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </div>
                 <div class="hotels__card">
-                    <img src="../assets/images/hotels-1-360.jpg" alt="Three buildings hotel at night">
+                    <picture>
+                        <source srcset="../assets/images/hotels-1-540.jpg" media="(min-width: 900px)">
+                        <img src="../assets/images/hotels-1-360.jpg" alt="Three buildings hotel at night">
+                    </picture>
                     <div class="hotels__hover">
                         <h3 class="headline headline--small headline--white">Paradise Hotel, Maldives</h3>
                         <i class="fas fa-arrow-right"></i>
@@ -208,8 +234,8 @@
                 <div class="staff__card">
                     <img src="./images/staff-360-light.jpg" alt="">
                     <h2 class="headline headline--centered">We Are Amazing. Come on and Check it Out.</h2>
-                    <button class="btn btn--centered">Book it now!!</button>
                 </div>
+                <button class="btn btn--centered">Book it now!!</button>
             </section>
         </div>
     </div>
@@ -265,7 +291,8 @@
                         <a href="tel:+44207333111" class="footer__link">+44 207 333 111</a>
                     </li>
                     <li class="footer__item">
-                        <p class="footer__text"> 28 Royal Road, EC1 1LI, London, UK</p>
+                        <p class="footer__text"> 28 Royal Road, EC1 1LI</p>
+                        <London, class="footer__text">London, UK</p>
                     </li>
                     <li class="footer__item">
                         <a href="" class="footer__link"><i class="fab fa-facebook"></i></a>
@@ -273,10 +300,10 @@
                         <a href="" class="footer__link"><i class="fab fa-twitter"></i></a>
                     </li>
                 </ul>
-                <small class="footer__copyright">Copyright &copy; 2020, Paradise Hotels. All Rights Reserved. Website
-                    developed with <i class="fas fa-heart"></i> by
-                    iPawel</small>
             </footer>
+            <small class="copyright">Copyright &copy; 2020, Paradise Hotels. All Rights Reserved. Website
+                developed with <i class="fas fa-heart"></i> by
+                iPawel</small>
         </div>
     </div>
 

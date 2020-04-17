@@ -1,11 +1,31 @@
 .hotels {
 
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+
+    @include largeTablet {
+        grid-column-gap: 3rem;
+    }
+
+    &__content {
+        @include largeTablet {
+            margin-top: 1rem;
+        }
+    }
+
 
     &__card {
         position: relative;
         width: 100%;
         margin: 2rem 0;
 
+    }
+
+    & img {
+        object-fit: cover;
     }
 
     &__hover {
@@ -19,7 +39,6 @@
             border-radius: 50%;
             color: $purple-color;
             background-color: #fff;
-            transform: translateY(7rem);
             opacity: .8;
         }
     }

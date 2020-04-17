@@ -1,5 +1,12 @@
 .room {
 
+    @include largeTablet {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1.5rem;
+        padding-bottom: 5rem;
+    }
+
 
 
     &__image-container {
@@ -31,10 +38,11 @@
         letter-spacing: 4px;
         font-weight: 400;
         margin-left: .3rem;
+        font-size: 1.2rem;
     }
 
     &__text {
-        margin: 1.3rem 0;
+        margin: .6rem 0 0;
         line-height: 1.6;
         font-size: 1.125rem;
         letter-spacing: 2px;
@@ -53,11 +61,21 @@
         }
     }
 
+    &__details {
+        position: relative;
+    }
+
     &__description {
         padding: 2rem 1rem;
-        color: black;
-        background-color: rgba($purple-color, .55);
+        color: white;
+        background-color: rgba($purple-color, .65);
         box-shadow: 2px 2px 5px rgba(black, .7);
+
+        @include largeTablet {
+            position: absolute;
+            bottom: -5rem;
+            left: -6rem;
+        }
 
         & .fas {
             margin-right: .5rem;

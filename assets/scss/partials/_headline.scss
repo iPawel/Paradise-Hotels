@@ -4,8 +4,20 @@
     letter-spacing: 2px;
     margin: 1rem 0;
 
+    @include xLargeMobile {
+        font-size: 2rem;
+    }
+
+    @include largeTablet {
+        font-size: 3rem;
+    }
+
     &--small {
         font-size: 1.4rem;
+
+        @include xLargeMobile {
+            font-size: 1.6rem;
+        }
     }
 
     &--centered {
